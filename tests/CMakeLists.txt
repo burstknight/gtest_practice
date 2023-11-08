@@ -9,5 +9,11 @@ add_executable(test_add ./test_add.cpp)
 # Link the libraries. Note, we need add `gtest` and `gtest_main` for gtest.
 target_link_libraries(test_add myMathLib  gtest gtest_main)
 
+add_executable(test_array ./test_array.cpp)
+target_link_libraries(test_array gtest gtest_main)
+
 # Add an unit test for `test_add`.
 add_test(test_add test_add)
+
+# Add an unit test for `test_array`
+add_test(test_array, test_array)
